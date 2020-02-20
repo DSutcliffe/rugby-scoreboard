@@ -37,7 +37,7 @@ class App extends Component {
         <div className="footerSection">
 
           <div className="">
-            <p>Commentary</p>
+            <p>Team Highlights</p>
           </div>
 
           <div className="teamPlayers">
@@ -105,9 +105,13 @@ class App extends Component {
           </div>
 
           <div className="">
-            <p>Commentary</p>
+            <p>Team Highlights</p>
           </div>
 
+        </div>
+
+        <div className="commentary">
+          <p>COMMENTARY</p>
         </div>
 
       </div>

@@ -23,6 +23,7 @@
 .teamPlayers {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 
 .scoreType {
@@ -33,6 +34,8 @@
 .footerCenter {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-around; */
+  justify-content: space-between;
 }
 
 .scoreTypeName {
