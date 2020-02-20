@@ -1,0 +1,18 @@
+.header {
+  text-align: center;
+}
+
+.teamNames {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.timerScores {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.timer {
+  text-align: center;
+}

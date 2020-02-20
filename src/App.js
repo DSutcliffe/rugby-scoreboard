@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './css/App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Timer from './components/Timer.js'
+
+class App extends Component {
+
+  render() {
+
+    return (
+      <div className="App">
+
+        <div className="header">
+          <h1>Rugby Scoreboard</h1>
+        </div>
+
+        <div className="teamNames">
+          <h2>Team 1</h2>
+          <h2>Team 2</h2>
+        </div>
+
+        <div className="timerScores">
+          <h3>00</h3>
+          <Timer />
+          <h3>00</h3>
+        </div>
+        
+      </div>
+    )
+  }
+
 }
 
 export default App;
