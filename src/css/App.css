@@ -2,17 +2,46 @@
   text-align: center;
 }
 
-.teamNames {
+.middleSection {
   display: flex;
   justify-content: space-evenly;
 }
-
-.timerScores {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 
 .timer {
   text-align: center;
+}
+
+.teamScores {
+  text-align: center;
+}
+
+.footerSection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.teamPlayers {
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreType {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerCenter {
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreTypeName {
+  width: 150px;
+  text-align: center;
+}
+
+.scoreType {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }

@@ -11,20 +11,105 @@ class App extends Component {
       <div className="App">
 
         <div className="header">
+
           <h1>Rugby Scoreboard</h1>
+
         </div>
 
-        <div className="teamNames">
-          <h2>Team 1</h2>
-          <h2>Team 2</h2>
+        <div className="middleSection">
+
+          <div className="teamScores">
+            <h2>Team 1</h2>
+            <h3>00</h3>
+          </div>
+
+          <div className="timerScores">
+            <Timer />
+          </div>
+
+          <div className="teamScores">
+            <h2>Team 2</h2>
+            <h3>00</h3>
+          </div>
+
         </div>
 
-        <div className="timerScores">
-          <h3>00</h3>
-          <Timer />
-          <h3>00</h3>
+        <div className="footerSection">
+
+          <div className="">
+            <p>Commentary</p>
+          </div>
+
+          <div className="teamPlayers">
+            <button>Player 1</button>
+            <button>Player 2</button>
+            <button>Player 3</button>
+            <button>Player 4</button>
+            <button>Player 5</button>
+            <button>Player 6</button>
+            <button>Player 7</button>
+            <button>Player 8</button>
+            <button>Player 9</button>
+            <button>Player 10</button>
+            <button>Player 11</button>
+            <button>Player 12</button>
+            <button>Player 13</button>
+            <button>Player 14</button>
+            <button>Player 15</button>
+          </div>
+
+          <div className="footerCenter">
+
+            <div className="scoreType">
+              <button>0</button>
+              <h3 className="scoreTypeName">Try</h3>
+              <button>0</button>
+            </div>
+
+            <div className="scoreType">
+              <button>0</button>
+              <h3 className="scoreTypeName">Conversion</h3>
+              <button>0</button>
+            </div>
+
+            <div className="scoreType">
+              <button>0</button>
+              <h3 className="scoreTypeName">Penalty</h3>
+              <button>0</button>
+            </div>
+
+            <div className="scoreType">
+              <button>0</button>
+              <h3 className="scoreTypeName">Drop Goal</h3>
+              <button>0</button>
+            </div>
+
+          </div>
+
+          <div className="teamPlayers">
+            <button>Player 1</button>
+            <button>Player 2</button>
+            <button>Player 3</button>
+            <button>Player 4</button>
+            <button>Player 5</button>
+            <button>Player 6</button>
+            <button>Player 7</button>
+            <button>Player 8</button>
+            <button>Player 9</button>
+            <button>Player 10</button>
+            <button>Player 11</button>
+            <button>Player 12</button>
+            <button>Player 13</button>
+            <button>Player 14</button>
+            <button>Player 15</button>
+          </div>
+
+          <div className="">
+            <p>Commentary</p>
+          </div>
+
         </div>
-        
+
       </div>
     )
   }
