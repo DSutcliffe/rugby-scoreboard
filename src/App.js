@@ -5,15 +5,43 @@ import Timer from './components/Timer.js'
 
 class App extends Component {
 
+  state = {
+    team1TryCount: 0,
+    team1ConversionCount: 0,
+    team1PenaltyCount: 0,
+    team1DropGoalCount: 0
+  }
+
+  addToTryCount = () => {
+    console.log("IN addToTryCount METHOD");
+    
+    this.setState({
+      team1TryCount: this.tryCount + 1
+    })
+  }
+
+  addToConversionCount = () => {
+    console.log("IN addToConversionCount METHOD");
+
+  }
+
+  addToPenaltyCount = () => {
+    console.log("IN addToPenaltyCount METHOD");
+
+  }
+
+  addToDropGoalCount = () => {
+    console.log("IN addToDropGoalCount METHOD");
+
+  }
+
   render() {
 
     return (
       <div className="App">
 
         <div className="header">
-
           <h1>Rugby Scoreboard</h1>
-
         </div>
 
         <div className="middleSection">
@@ -61,25 +89,25 @@ class App extends Component {
           <div className="footerCenter">
 
             <div className="scoreType">
-              <button>0</button>
+              <button onClick={this.addToTryCount}>{this.team1TryCount}</button>
               <h3 className="scoreTypeName">Try</h3>
               <button>0</button>
             </div>
 
             <div className="scoreType">
-              <button>0</button>
+              <button onClick={this.addToConversionCount}>{this.team1ConversionCount}</button>
               <h3 className="scoreTypeName">Conversion</h3>
               <button>0</button>
             </div>
 
             <div className="scoreType">
-              <button>0</button>
+              <button onClick={this.addToPenaltyCount}>{this.team1PenaltyCount}</button>
               <h3 className="scoreTypeName">Penalty</h3>
               <button>0</button>
             </div>
 
             <div className="scoreType">
-              <button>0</button>
+              <button onClick={this.addToDropGoalCount}>{this.team1DropGoalCount}</button>
               <h3 className="scoreTypeName">Drop Goal</h3>
               <button>0</button>
             </div>
