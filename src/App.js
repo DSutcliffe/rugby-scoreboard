@@ -16,8 +16,11 @@ class App extends Component {
     console.log("IN addToTryCount METHOD");
     
     this.setState({
-      team1TryCount: this.tryCount + 1
+      team1TryCount: this.team1TryCount + 1
+      // team1TryCount: 999
     })
+    console.log(this.state.team1TryCount);
+    
   }
 
   addToConversionCount = () => {
@@ -64,8 +67,50 @@ class App extends Component {
 
         <div className="footerSection">
 
-          <div className="">
-            <p>Team Highlights</p>
+          <div className="teamHighlights">
+            <h4>Team Highlights</h4>
+              <ul>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+              </ul>
           </div>
 
           <div className="teamPlayers">
@@ -89,27 +134,28 @@ class App extends Component {
           <div className="footerCenter">
 
             <div className="scoreType">
-              <button onClick={this.addToTryCount}>{this.team1TryCount}</button>
+              {/* <button onClick={this.addToTryCount}>{this.team1TryCount}</button> */}
+              <button className="scoreButton" onClick={this.addToTryCount} value={this.team1TryCount} id="team1TryCount">9999</button>
               <h3 className="scoreTypeName">Try</h3>
-              <button>0</button>
+              <button className="scoreButton">9999</button>
             </div>
 
             <div className="scoreType">
-              <button onClick={this.addToConversionCount}>{this.team1ConversionCount}</button>
+              <button className="scoreButton" onClick={this.addToConversionCount}>{this.team1ConversionCount}</button>
               <h3 className="scoreTypeName">Conversion</h3>
-              <button>0</button>
+              <button className="scoreButton">0</button>
             </div>
 
             <div className="scoreType">
-              <button onClick={this.addToPenaltyCount}>{this.team1PenaltyCount}</button>
+              <button className="scoreButton" onClick={this.addToPenaltyCount}>{this.team1PenaltyCount}</button>
               <h3 className="scoreTypeName">Penalty</h3>
-              <button>0</button>
+              <button className="scoreButton">0</button>
             </div>
 
             <div className="scoreType">
-              <button onClick={this.addToDropGoalCount}>{this.team1DropGoalCount}</button>
+              <button className="scoreButton" onClick={this.addToDropGoalCount}>{this.team1DropGoalCount}</button>
               <h3 className="scoreTypeName">Drop Goal</h3>
-              <button>0</button>
+              <button className="scoreButton">0</button>
             </div>
 
           </div>
@@ -132,14 +178,28 @@ class App extends Component {
             <button>Player 15</button>
           </div>
 
-          <div className="">
-            <p>Team Highlights</p>
+          <div className="teamHighlights">
+            <h4>Team Highlights</h4>
+              <ul>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+                <li>00:00 Score</li>
+            </ul>
           </div>
 
         </div>
 
         <div className="commentary">
-          <p>COMMENTARY</p>
+          <h4>COMMENTARY</h4>
+          <ul>
+            <li>00:00 Score</li>
+            <li>00:00 Score</li>
+            <li>00:00 Score</li>
+            <li>00:00 Score</li>
+            <li>00:00 Score</li>
+          </ul>
         </div>
 
       </div>

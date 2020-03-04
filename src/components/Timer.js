@@ -38,7 +38,8 @@ class Timer extends Component {
       console.log(this.count);
       
       if(this.count === 5) {
-          console.log("Half Time!!!");
+          // console.log("Half Time!!!");
+          this.clearTimer()
       }
   }
 
