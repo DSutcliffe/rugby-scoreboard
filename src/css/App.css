@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.middleSection {
+.middleSectionTop {
   display: flex;
   justify-content: space-evenly;
 }
@@ -15,7 +15,12 @@
   text-align: center;
 }
 
-.footerSection {
+.middleSectionMiddle {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.middleSectionBottom {
   display: flex;
   justify-content: space-evenly;
 }
@@ -25,7 +30,8 @@
   /* border-top: 0; */
   /* padding-top: 0; */
   height: 320px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
+  overflow: auto;
   color: white;
   background-color: black;
   width: 450px;
@@ -67,7 +73,8 @@
 .commentary {
   color: white;
   background-color: black;
-  height: 250px;
+  height: 180px;
+  
   margin-left: 20px;
   margin-right: 20px;
 }

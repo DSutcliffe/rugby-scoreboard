@@ -47,7 +47,7 @@ class App extends Component {
           <h1>Rugby Scoreboard</h1>
         </div>
 
-        <div className="middleSection">
+        <div className="middleSectionTop">
 
           <div className="teamScores">
             <h2>Team 1</h2>
@@ -65,52 +65,67 @@ class App extends Component {
 
         </div>
 
-        <div className="footerSection">
+        <div className="middleSectionMiddle">
+
+          <div>
+            <h4>Team Highlights</h4>
+          </div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div>
+            <h4>Team Highlights</h4>
+          </div>
+
+        </div>
+
+        <div className="middleSectionBottom">
 
           <div className="teamHighlights">
-            <h4>Team Highlights</h4>
-              <ul>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-              </ul>
+            <ul>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+            </ul>
           </div>
 
           <div className="teamPlayers">
@@ -135,7 +150,7 @@ class App extends Component {
 
             <div className="scoreType">
               {/* <button onClick={this.addToTryCount}>{this.team1TryCount}</button> */}
-              <button className="scoreButton" onClick={this.addToTryCount} value={this.team1TryCount} id="team1TryCount">9999</button>
+              <button className="scoreButton" onClick={this.addToTryCount} value={this.team1TryCount} id="team1TryCount"></button>
               <h3 className="scoreTypeName">Try</h3>
               <button className="scoreButton">9999</button>
             </div>
@@ -179,14 +194,48 @@ class App extends Component {
           </div>
 
           <div className="teamHighlights">
-            <h4>Team Highlights</h4>
-              <ul>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-                <li>00:00 Score</li>
-            </ul>
+            <ul>
+            <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+              <li>00:00 Score</li>
+          </ul>
           </div>
 
         </div>
