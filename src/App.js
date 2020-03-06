@@ -7,35 +7,62 @@ class App extends Component {
 
   state = {
     team1TryCount: 0,
+    team1TryScored: false,
     team1ConversionCount: 0,
     team1PenaltyCount: 0,
-    team1DropGoalCount: 0
+    team1DropGoalCount: 0,
+    team1Score: 0,
+    team1PlayerNumber: "",
+
+    team2TryCount: 0,
+    team2TryScored: false,
+    team2ConversionCount: 0,
+    team2PenaltyCount: 0,
+    team2DropGoalCount: 0,
+    team2Score: 0,
+    team2PlayerNumber: ""
+  }
+
+  addToPenaltyCount = () => {
+    console.log("IN addToPenaltyCount METHOD");
+
+    this.setState({
+      team1PenaltyCount: this.state.team1PenaltyCount + 1,
+      team1Score: this.state.team1Score + 3
+    })
+  }
+
+  addToDropGoalCount = () => {
+    console.log("IN addToDropGoalCount METHOD");
+
+    this.setState({
+      team1DropGoalCount: this.state.team1DropGoalCount + 1,
+      team1Score: this.state.team1Score + 3
+    })
   }
 
   addToTryCount = () => {
     console.log("IN addToTryCount METHOD");
     
     this.setState({
-      team1TryCount: this.team1TryCount + 1
-      // team1TryCount: 999
+      team1TryCount: this.state.team1TryCount + 1,
+      team1Score: this.state.team1Score + 5,
+      team1TryScored: true
     })
-    console.log(this.state.team1TryCount);
     
   }
 
   addToConversionCount = () => {
     console.log("IN addToConversionCount METHOD");
 
-  }
-
-  addToPenaltyCount = () => {
-    console.log("IN addToPenaltyCount METHOD");
-
-  }
-
-  addToDropGoalCount = () => {
-    console.log("IN addToDropGoalCount METHOD");
-
+    if (this.state.team1TryScored === true) {
+      this.setState({
+        team1ConversionCount: this.state.team1ConversionCount + 1,
+        team1Score: this.state.team1Score + 2,
+        team1TryScored: false
+      })
+    }
+    
   }
 
   render() {
@@ -51,7 +78,7 @@ class App extends Component {
 
           <div className="teamScores">
             <h2>Team 1</h2>
-            <h3>00</h3>
+            <h3>{this.state.team1Score}</h3>
           </div>
 
           <div className="timerScores">
@@ -149,28 +176,27 @@ class App extends Component {
           <div className="footerCenter">
 
             <div className="scoreType">
-              {/* <button onClick={this.addToTryCount}>{this.team1TryCount}</button> */}
-              <button className="scoreButton" onClick={this.addToTryCount} value={this.team1TryCount} id="team1TryCount"></button>
+              <button className="scoreButton" onClick={this.addToTryCount}>{this.state.team1TryCount}</button>
               <h3 className="scoreTypeName">Try</h3>
-              <button className="scoreButton">9999</button>
+              <button className="scoreButton">{this.state.team2TryCount}</button>
             </div>
 
             <div className="scoreType">
-              <button className="scoreButton" onClick={this.addToConversionCount}>{this.team1ConversionCount}</button>
+              <button className="scoreButton" onClick={this.addToConversionCount}>{this.state.team1ConversionCount}</button>
               <h3 className="scoreTypeName">Conversion</h3>
-              <button className="scoreButton">0</button>
+              <button className="scoreButton">{this.state.team2ConversionCount}</button>
             </div>
 
             <div className="scoreType">
-              <button className="scoreButton" onClick={this.addToPenaltyCount}>{this.team1PenaltyCount}</button>
+              <button className="scoreButton" onClick={this.addToPenaltyCount}>{this.state.team1PenaltyCount}</button>
               <h3 className="scoreTypeName">Penalty</h3>
-              <button className="scoreButton">0</button>
+              <button className="scoreButton">{this.state.team2PenaltyCount}</button>
             </div>
 
             <div className="scoreType">
-              <button className="scoreButton" onClick={this.addToDropGoalCount}>{this.team1DropGoalCount}</button>
+              <button className="scoreButton" onClick={this.addToDropGoalCount}>{this.state.team1DropGoalCount}</button>
               <h3 className="scoreTypeName">Drop Goal</h3>
-              <button className="scoreButton">0</button>
+              <button className="scoreButton">{this.state.team2DropGoalCount}</button>
             </div>
 
           </div>
