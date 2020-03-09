@@ -28,7 +28,9 @@ class App extends Component {
     team2PlayerNumber: "",
     team2ScoreType: "",
     team2Time: [],
-    team2Highlights: { time: "", player: "", scoreType: ""}
+    team2Highlights: { time: "", player: "", scoreType: ""},
+
+    commentary: []
   }
 
   addToPenaltyCount = () => {
@@ -38,13 +40,15 @@ class App extends Component {
       this.setState({
         team1PenaltyCount: this.state.team1PenaltyCount + 1,
         team1Score: this.state.team1Score + 3,
-        team1Time: [...this.state.team1Time, `12:00 | Player ${this.state.team1PlayerNumber} : Penalty Scored`]
+        team1Time: [`12:00 | Player ${this.state.team1PlayerNumber} : Penalty Scored`, ...this.state.team1Time],
+        commentary: [`12:00 - Team ${this.state.teamNumber} Scored... [Team 1] ${this.state.team1Score + 3} | ${this.state.team2Score} [Team2]`, ...this.state.commentary]
       })
     } else {
       this.setState({
         team2PenaltyCount: this.state.team2PenaltyCount + 1,
         team2Score: this.state.team2Score + 3,
-        team2Time: [...this.state.team2Time, `12:00 | Player ${this.state.team2PlayerNumber} : Penalty Scored`]
+        team2Time: [`12:00 | Player ${this.state.team2PlayerNumber} : Penalty Scored`, ...this.state.team2Time],
+        commentary: [`12:00 - Team ${this.state.teamNumber} Scored... [Team 1] ${this.state.team1Score} | ${this.state.team2Score + 3} [Team2]`, ...this.state.commentary]
       })
     }
     
@@ -57,13 +61,15 @@ class App extends Component {
       this.setState({
         team1DropGoalCount: this.state.team1DropGoalCount + 1,
         team1Score: this.state.team1Score + 3,
-        team1Time: [...this.state.team1Time, `12:00 | Player ${this.state.team1PlayerNumber} : Drop Goal Scored`]
+        team1Time: [`12:00 | Player ${this.state.team1PlayerNumber} : Drop Goal Scored`, ...this.state.team1Time],
+        commentary: [`12:00 - Team ${this.state.teamNumber} Scored... [Team 1] ${this.state.team1Score + 3} | ${this.state.team2Score} [Team2]`, ...this.state.commentary]
       })
     } else {
       this.setState({
         team2DropGoalCount: this.state.team2DropGoalCount + 1,
         team2Score: this.state.team2Score + 3,
-        team2Time: [...this.state.team2Time, `12:00 | Player ${this.state.team2PlayerNumber} : Drop Goal Scored`]
+        team2Time: [`12:00 | Player ${this.state.team2PlayerNumber} : Drop Goal Scored`, ...this.state.team2Time],
+        commentary: [`12:00 - Team ${this.state.teamNumber} Scored... [Team 1] ${this.state.team1Score} | ${this.state.team2Score + 3} [Team2]`, ...this.state.commentary]
       })
     }
     
@@ -76,17 +82,20 @@ class App extends Component {
       this.setState({
         team1TryCount: this.state.team1TryCount + 1,
         team1Score: this.state.team1Score + 5,
-        team1Time: [...this.state.team1Time, `12:00 | Player ${this.state.team1PlayerNumber} : Try Scored`],
+        team1Time: [`12:00 | Player ${this.state.team1PlayerNumber} : Try Scored`, ...this.state.team1Time],
+        commentary: [`12:00 - Team ${this.state.teamNumber} Scored... [Team 1] ${this.state.team1Score + 5} | ${this.state.team2Score} [Team2]`, ...this.state.commentary],
         team1TryScored: true
       })
     } else {
       this.setState({
         team2TryCount: this.state.team2TryCount + 1,
         team2Score: this.state.team2Score + 5,
-        team2Time: [...this.state.team2Time, `12:00 | Player ${this.state.team2PlayerNumber} : Try Scored`],
+        team2Time: [`12:00 | Player ${this.state.team2PlayerNumber} : Try Scored`, ...this.state.team2Time],
+        commentary: [`12:00 - Team ${this.state.teamNumber} Scored... [Team 1] ${this.state.team1Score} | ${this.state.team2Score + 5} [Team2]`, ...this.state.commentary],
         team2TryScored: true
       })
     }
+    console.log(this.state.commentary);
     
     
   }
@@ -99,7 +108,8 @@ class App extends Component {
         this.setState({
           team1ConversionCount: this.state.team1ConversionCount + 1,
           team1Score: this.state.team1Score + 2,
-          team1Time: [...this.state.team1Time, `12:00 | Player ${this.state.team1PlayerNumber} : Conversion Scored`],
+          team1Time: [`12:00 | Player ${this.state.team1PlayerNumber} : Conversion Scored`, ...this.state.team1Time],
+          commentary: [`12:00 - Team ${this.state.teamNumber} Scored... [Team 1] ${this.state.team1Score + 2} | ${this.state.team2Score} [Team2]`, ...this.state.commentary],
           team1TryScored: false
         })
       }
@@ -108,7 +118,8 @@ class App extends Component {
         this.setState({
           team2ConversionCount: this.state.team2ConversionCount + 1,
           team2Score: this.state.team2Score + 2,
-          team2Time: [...this.state.team2Time, `12:00 | Player ${this.state.team2PlayerNumber} : Conversion Scored`],
+          team2Time: [`12:00 | Player ${this.state.team2PlayerNumber} : Conversion Scored`, ...this.state.team2Time],
+          commentary: [`12:00 - Team ${this.state.teamNumber} Scored... [Team 1] ${this.state.team1Score} | ${this.state.team2Score + 2} [Team2]`, ...this.state.commentary],
           team2TryScored: false
         })
       }
@@ -139,12 +150,21 @@ class App extends Component {
     )
   }
 
+  createCommentary = (item) => {
+    return (
+      <li>{item}</li>
+    )
+  }
+
   render() {
     const t1Highlights = this.state.team1Time
     const listT1Highlights = t1Highlights.map(this.createHighlights)
 
     const t2Highlights = this.state.team2Time
     const listT2Highlights = t2Highlights.map(this.createHighlights)
+
+    const matchCommentary = this.state.commentary
+    const listMatchCommentary = matchCommentary.map(this.createCommentary)
 
     return (
       <div className="App">
@@ -263,15 +283,12 @@ class App extends Component {
 
         </div>
 
-        <div className="commentary">
-          <h4>COMMENTARY</h4>
-          <ul>
-            <li>00:00 Score</li>
-            <li>00:00 Score</li>
-            <li>00:00 Score</li>
-            <li>00:00 Score</li>
-            <li>00:00 Score</li>
-          </ul>
+        <div>
+          <h4 className="commentaryHeading">COMMENTARY</h4>
+        </div>
+          
+        <div>
+          <ul className="matchCommentary">{listMatchCommentary}</ul>
         </div>
 
       </div>

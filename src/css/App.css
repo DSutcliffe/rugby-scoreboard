@@ -22,7 +22,8 @@
 
 .middleSectionBottom {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+  justify-content: space-between;
 }
 
 .teamHighlights {
@@ -35,6 +36,8 @@
   color: white;
   background-color: black;
   width: 450px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .teamPlayers {
@@ -70,13 +73,18 @@
   justify-content: space-evenly;
 }
 
-.commentary {
+.commentaryHeading {
+  margin-left: 30px;
+  width: 100px;
+}
+
+.matchCommentary {
   color: white;
-  background-color: black;
-  height: 180px;
-  
   margin-left: 20px;
   margin-right: 20px;
+  background-color: black;
+  height: 150px;
+  overflow: auto;
 }
 
 li {
